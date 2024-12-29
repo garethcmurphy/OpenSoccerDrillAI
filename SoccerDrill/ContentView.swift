@@ -1,40 +1,81 @@
-//
-//  ContentView.swift
-//  SoccerDrill
-//
-//  Created by Gareth Murphy on 28/12/2024.
-//
-
 import SwiftUI
-import RealityKit
 
-struct ContentView : View {
-
+struct ContentView: View {
     var body: some View {
-        RealityView { content in
-
-            // Create a cube model
-            let model = Entity()
-            let mesh = MeshResource.generateBox(size: 0.1, cornerRadius: 0.005)
-            let material = SimpleMaterial(color: .gray, roughness: 0.15, isMetallic: true)
-            model.components.set(ModelComponent(mesh: mesh, materials: [material]))
-            model.position = [0, 0.05, 0]
-
-            // Create horizontal plane anchor for the content
-            let anchor = AnchorEntity(.plane(.horizontal, classification: .any, minimumBounds: SIMD2<Float>(0.2, 0.2)))
-            anchor.addChild(model)
-
-            // Add the horizontal plane anchor to the scene
-            content.add(anchor)
-
-            content.camera = .spatialTracking
-
+        NavigationView {
+            VStack {
+                Text("⚽️ Soccer Drill 🏟️")
+                    .font(.largeTitle)
+                    .padding()
+                
+                Spacer()
+            }
+            .navigationTitle("Home")
+            .toolbar {
+                ToolbarItemGroup(placement: .bottomBar) {
+                    NavigationLink(destination: HomeView()) {
+                        Label("Home", systemImage: "house")
+                    }
+                    
+                    Spacer()
+                    
+                    NavigationLink(destination: TeamsView()) {
+                        Label("Teams", systemImage: "person.3")
+                    }
+                    
+                    Spacer()
+                    
+                    NavigationLink(destination: PlayersView()) {
+                        Label("Players", systemImage: "sportscourt")
+                    }
+                }
+            }
         }
-        .edgesIgnoringSafeArea(.all)
     }
-
 }
 
+// Dummy Home View
+struct HomeView: View {
+    var body: some View {
+        VStack {
+            Text("⚽️Home View")
+                .font(.largeTitle)
+                .padding()
+            Spacer()
+            
+        }
+        .navigationTitle("⚽️ Home ")
+    }
+}
+
+// Dummy Teams View
+struct TeamsView: View {
+    var body: some View {
+        VStack {
+            Text("Teams View")
+                .font(.largeTitle)
+                .padding()
+            Spacer()
+        }
+        .navigationTitle("Teams")
+    }
+}
+
+// Dummy Players View
+struct PlayersView: View {
+    var body: some View {
+        VStack {
+            Text("Players View")
+                .font(.largeTitle)
+                .padding()
+            Spacer()
+        }
+        .navigationTitle("Players")
+    }
+}
+
+
 #Preview {
+    // The view to preview.
     ContentView()
 }
