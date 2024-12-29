@@ -63,7 +63,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("⚽️ Home")
+            .navigationTitle("⚽️ Drill")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     NavigationLink(destination: HomeView()) {
@@ -79,7 +79,7 @@ struct ContentView: View {
                     Spacer()
                     
                     NavigationLink(destination: PlayersView()) {
-                        Label("Players", systemImage: "sportscourt")
+                        Label("Layouts", systemImage: "sportscourt")
                     }
                 }
             }
@@ -95,6 +95,8 @@ struct HomeView: View {
                 .font(.largeTitle)
                 .padding()
             Spacer()
+            // add a gallery of images of soccer drills
+            
             
         }
         .navigationTitle("⚽️ Home ")
@@ -110,7 +112,7 @@ struct TeamsView: View {
                 .padding()
             Spacer()
         }
-        .navigationTitle("Teams")
+        .navigationTitle("Advice")
     }
 }
 
@@ -118,12 +120,12 @@ struct TeamsView: View {
 struct PlayersView: View {
     var body: some View {
         VStack {
-            Text("Players View")
+            Text("Layouts")
                 .font(.largeTitle)
                 .padding()
             Spacer()
         }
-        .navigationTitle("Players")
+        .navigationTitle("Layouts")
     }
 }
 
