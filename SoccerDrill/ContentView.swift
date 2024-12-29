@@ -63,7 +63,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("⚽️ Drill")
+            .navigationTitle("⚽️ Soccer")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     NavigationLink(destination: HomeView()) {
