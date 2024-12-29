@@ -31,7 +31,7 @@ struct DrillDetailView: View {
 struct ContentView: View {
     let drills = [
         Drill(name: "Passing Drill", description: "Improve your short and long passes with this drill."
-             , details: "Passing is a fundamental skill in soccer. This drill will help you improve your short and long passes. Focus on accuracy and power. Use both feet to pass the ball. Keep your body over the ball and follow through with your kicking foot."),
+             , details: "Passing is a fundamental skill in soccer. \nThis drill will help you improve your short and long passes. \nFocus on accuracy and power. \nUse both feet to pass the ball. \nKeep your body over the ball and follow through with your kicking foot."),
         Drill(name: "Shooting Drill", description: "Enhance accuracy and power with focused shooting practice.",
              details: "Shooting is a key skill for forwards and midfielders. This drill will help you improve your accuracy and power. Focus on technique and placement. Use both feet to shoot"),
         Drill(name: "Dribbling Drill", description: "Work on close ball control and quick direction changes.",
@@ -73,7 +73,7 @@ struct ContentView: View {
                     Spacer()
                     
                     NavigationLink(destination: TeamsView()) {
-                        Label("Teams", systemImage: "person.3")
+                        Label("Teams", systemImage: "soccerball")
                     }
                     
                     Spacer()
@@ -97,6 +97,12 @@ struct HomeView: View {
             Spacer()
             // add a gallery of images of soccer drills
             
+            // show images of soccer drills
+            Image("image")
+                .resizable() // Makes the image resizable
+                .scaledToFit() // Scales it to fit within the frame
+                .frame(width: 200, height: 200)
+            
             
         }
         .navigationTitle("⚽️ Home ")
@@ -107,10 +113,14 @@ struct HomeView: View {
 struct TeamsView: View {
     var body: some View {
         VStack {
-            Text("Teams View")
+            Text("Advice View")
                 .font(.largeTitle)
                 .padding()
             Spacer()
+            Image("image")
+                .resizable() // Makes the image resizable
+                .scaledToFit() // Scales it to fit within the frame
+                .frame(width: 200, height: 200)
         }
         .navigationTitle("Advice")
     }
@@ -124,6 +134,10 @@ struct PlayersView: View {
                 .font(.largeTitle)
                 .padding()
             Spacer()
+            Image("image")
+                .resizable() // Makes the image resizable
+                .scaledToFit() // Scales it to fit within the frame
+                .frame(width: 200, height: 200)
         }
         .navigationTitle("Layouts")
     }
