@@ -5,6 +5,7 @@ struct Drill: Identifiable {
     let name: String
     let description: String
     let details: String
+    let image: String
 }
 
 // MARK: - Drill Detail View
@@ -22,6 +23,13 @@ struct DrillDetailView: View {
             Text(drill.details)
                 .font(.body)
                 .padding()
+            
+
+            Image(drill.image)
+                .resizable() // Makes the image resizable
+                .scaledToFit() // Scales it to fit within the frame
+ 
+                
             Spacer()
         }
         .navigationTitle(drill.name)
@@ -31,15 +39,23 @@ struct DrillDetailView: View {
 struct ContentView: View {
     let drills = [
         Drill(name: "Passing Drill", description: "Improve your short and long passes with this drill."
-             , details: "Passing is a fundamental skill in soccer. \nThis drill will help you improve your short and long passes. \nFocus on accuracy and power. \nUse both feet to pass the ball. \nKeep your body over the ball and follow through with your kicking foot."),
+             , details: "Passing is a fundamental skill in soccer. \nThis drill will help you improve your short and long passes. \nFocus on accuracy and power. \nUse both feet to pass the ball. \nKeep your body over the ball and follow through with your kicking foot.",
+              image: "zigzag_layout"
+             ),
         Drill(name: "Shooting Drill", description: "Enhance accuracy and power with focused shooting practice.",
-             details: "Shooting is a key skill for forwards and midfielders. This drill will help you improve your accuracy and power. Focus on technique and placement. Use both feet to shoot"),
+             details: "Shooting is a key skill for forwards and midfielders. This drill will help you improve your accuracy and power. Focus on technique and placement. Use both feet to shoot",
+              image: "hollow_square_layout"
+             ),
         Drill(name: "Dribbling Drill", description: "Work on close ball control and quick direction changes.",
-             details: "Dribbling is a key skill for attacking players. This drill will help you improve your close ball control and quick direction changes. Focus on keeping the ball close to your feet and using both feet to dribble. Use cones to practice dribbling around obstacles."),
+             details: "Dribbling is a key skill for attacking players. This drill will help you improve your close ball control and quick direction changes. Focus on keeping the ball close to your feet and using both feet to dribble. Use cones to practice dribbling around obstacles.",
+              image: "diagonal_layout"),
         Drill(name: "Defensive Drill", description: "Learn positioning and tackle timing.",
-              details:  "Defending is a key skill for defenders and midfielders. This drill will help you improve your positioning and tackle timing. Focus on staying goal-side of the attacker and jockeying to force them wide. Time your tackles carefully and use your body to block shots."),
+              details:  "Defending is a key skill for defenders and midfielders. This drill will help you improve your positioning and tackle timing. Focus on staying goal-side of the attacker and jockeying to force them wide. Time your tackles carefully and use your body to block shots.",
+              image: "row_layout"),
         Drill(name: "Goalkeeping Drill", description: "Focus on saves, positioning, and distribution.",
-              details:  "Goalkeeping is a specialized position that requires unique skills. This drill will help you improve your saves, positioning, and distribution. Focus on getting your body behind the ball and using your hands to make saves. Position yourself well to cut down angles and make it difficult for attackers to score. Work on distributing the ball quickly and accurately to start counterattacks.")
+              details:  "Goalkeeping is a specialized position that requires unique skills. This drill will help you improve your saves, positioning, and distribution. Focus on getting your body behind the ball and using your hands to make saves. Position yourself well to cut down angles and make it difficult for attackers to score. Work on distributing the ball quickly and accurately to start counterattacks.",
+              image: "zizag_layout"
+             )
     ]
     
     var body: some View {
@@ -93,6 +109,9 @@ struct HomeView: View {
         VStack {
             Text("⚽️Home View")
                 .font(.largeTitle)
+                .padding()
+            Text("Welcome to the Soccer Drill App!")
+                .font(.title)
                 .padding()
             Spacer()
             // add a gallery of images of soccer drills
