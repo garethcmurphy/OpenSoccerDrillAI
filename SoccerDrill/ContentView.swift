@@ -75,11 +75,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("⚽️ Drills 🏟️")
-                    .font(.largeTitle)
-                    .padding()
                 
-                Spacer()
                 List(drills) { drill in
                     NavigationLink(destination: DrillDetailView(drill: drill)) {
                         VStack(alignment: .leading) {
@@ -93,7 +89,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("⚽️ Soccer")
+            .navigationTitle("⚽️ Drills")
             .toolbar {
                 ToolbarItemGroup(placement: .bottomBar) {
                     NavigationLink(destination: HomeView()) {
@@ -121,20 +117,15 @@ struct ContentView: View {
 struct HomeView: View {
     var body: some View {
         VStack {
-            Text("⚽️Home View")
-                .font(.largeTitle)
-                .padding()
             Text("Welcome to the Soccer Drill App!")
                 .font(.title)
                 .padding()
             Spacer()
-            // add a gallery of images of soccer drills
             
             // show images of soccer drills
             Image("image")
                 .resizable() // Makes the image resizable
                 .scaledToFit() // Scales it to fit within the frame
-                .frame(width: 200, height: 200)
             
             
         }
@@ -146,16 +137,14 @@ struct HomeView: View {
 struct TeamsView: View {
     var body: some View {
         VStack {
-            Text("Advice View")
-                .font(.largeTitle)
+            Text("Welcome to the Soccer Drill App!")
+                .font(.title)
                 .padding()
-            Spacer()
             Image("image")
                 .resizable() // Makes the image resizable
                 .scaledToFit() // Scales it to fit within the frame
-                .frame(width: 200, height: 200)
         }
-        .navigationTitle("Advice")
+        .navigationTitle("🏟️ Tips")
     }
 }
 
@@ -163,9 +152,6 @@ struct TeamsView: View {
 struct PlayersView: View {
     var body: some View {
         VStack {
-            Text("Layouts")
-                .font(.largeTitle)
-                .padding()
    
 
             Image("zigzag_layout")
