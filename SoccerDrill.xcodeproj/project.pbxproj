@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C0D58962D2A17FD003BAB16 /* readme1.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D58952D2A17FD003BAB16 /* readme1.md */; };
-		3C0D589A2D2A187B003BAB16 /* secuirty1.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D58992D2A187B003BAB16 /* secuirty1.md */; };
-		3C0D589C2D2A18A2003BAB16 /* code1.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D589B2D2A189C003BAB16 /* code1.md */; };
-		3C0D589E2D2A18B1003BAB16 /* licesne.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D589D2D2A18A9003BAB16 /* licesne.md */; };
+		3C0D58962D2A17FD003BAB16 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D58952D2A17FD003BAB16 /* README.md */; };
+		3C0D589A2D2A187B003BAB16 /* SECURITY.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D58992D2A187B003BAB16 /* SECURITY.md */; };
+		3C0D589C2D2A18A2003BAB16 /* CODE_OF_CONDUCT.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D589B2D2A189C003BAB16 /* CODE_OF_CONDUCT.md */; };
+		3C0D589E2D2A18B1003BAB16 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D589D2D2A18A9003BAB16 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,10 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3C0D58952D2A17FD003BAB16 /* readme1.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme1.md; sourceTree = "<group>"; };
-		3C0D58992D2A187B003BAB16 /* secuirty1.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = secuirty1.md; sourceTree = "<group>"; };
-		3C0D589B2D2A189C003BAB16 /* code1.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = code1.md; sourceTree = "<group>"; };
-		3C0D589D2D2A18A9003BAB16 /* licesne.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = licesne.md; sourceTree = "<group>"; };
+		3C0D58952D2A17FD003BAB16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3C0D58992D2A187B003BAB16 /* SECURITY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SECURITY.md; sourceTree = "<group>"; };
+		3C0D589B2D2A189C003BAB16 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
+		3C0D589D2D2A18A9003BAB16 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		3CE62D5C2D2034E10071521A /* SoccerDrill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerDrill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE62D6C2D2034E20071521A /* SoccerDrillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoccerDrillTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE62D762D2034E20071521A /* SoccerDrillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoccerDrillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,10 +86,10 @@
 		3CE62D532D2034E10071521A = {
 			isa = PBXGroup;
 			children = (
-				3C0D58952D2A17FD003BAB16 /* readme1.md */,
-				3C0D58992D2A187B003BAB16 /* secuirty1.md */,
-				3C0D589B2D2A189C003BAB16 /* code1.md */,
-				3C0D589D2D2A18A9003BAB16 /* licesne.md */,
+				3C0D58952D2A17FD003BAB16 /* README.md */,
+				3C0D58992D2A187B003BAB16 /* SECURITY.md */,
+				3C0D589B2D2A189C003BAB16 /* CODE_OF_CONDUCT.md */,
+				3C0D589D2D2A18A9003BAB16 /* LICENSE */,
 				3CE62D5E2D2034E10071521A /* SoccerDrill */,
 				3CE62D6F2D2034E20071521A /* SoccerDrillTests */,
 				3CE62D792D2034E20071521A /* SoccerDrillUITests */,
@@ -227,10 +227,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C0D589E2D2A18B1003BAB16 /* licesne.md in Resources */,
-				3C0D589A2D2A187B003BAB16 /* secuirty1.md in Resources */,
-				3C0D589C2D2A18A2003BAB16 /* code1.md in Resources */,
-				3C0D58962D2A17FD003BAB16 /* readme1.md in Resources */,
+				3C0D589E2D2A18B1003BAB16 /* LICENSE in Resources */,
+				3C0D589A2D2A187B003BAB16 /* SECURITY.md in Resources */,
+				3C0D589C2D2A18A2003BAB16 /* CODE_OF_CONDUCT.md in Resources */,
+				3C0D58962D2A17FD003BAB16 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

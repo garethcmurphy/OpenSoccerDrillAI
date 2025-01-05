@@ -166,25 +166,26 @@ struct TeamsView: View {
         "Make it Fun!: Rotate drills to keep practice engaging and exciting. Challenge yourself with fun variations or friendly competitions."
     ]
     var body: some View {
+        
         NavigationView {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 16) {
-                    ForEach(tips, id: \.self) { tip in
-                        HStack(alignment: .top) {
-                            Image(systemName: "soccerball") // Soccer icon
-                                .foregroundColor(.blue)
-                                .padding(.top, 5)
-                            Text(tip)
-                                .font(.body)
-                                .padding(.leading, 5)
-                        }
+            List {
+                ForEach(tips.indices, id: \.self) { index in
+                    HStack(alignment: .top) {
+                        Image(systemName: "soccerball")
+                            .foregroundColor(.blue)
+                        Text(tips[index])
+                            .font(.body)
+                            .padding(.leading, 5)
                     }
+                    .padding(.vertical, 5)
                 }
-                .padding()
             }
             .navigationTitle("Soccer Drill Tips")
         }
-    }
+
+          
+        }
+    
 }
 
 // Dummy Players View
