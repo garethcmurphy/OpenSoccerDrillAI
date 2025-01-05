@@ -15,15 +15,27 @@ struct DrillDetailView: View {
     let drill: Drill
     
     var body: some View {
-        VStack {
-            Text(drill.name)
-                .font(.largeTitle)
-                .padding()
-            Text(drill.description)
-                .font(.body)
-                .padding()
-            Text("Calories: \(drill.calories) calories")
-            Text("Time: \(drill.time) minutes")
+        VStack (alignment: .leading, spacing: 8){
+            HStack {
+                Text("Calories Burned:")
+                    .bold()
+                Spacer()
+                Text("\(drill.calories) calories")
+            }
+            HStack {
+                Text("Time:")
+                    .bold()
+                Spacer()
+                Text("\(drill.time) minutes")
+            }
+            HStack {
+                Text("Description:")
+                    .bold()
+                Spacer()
+                Text("\(drill.description)")
+            }
+
+    
             Text(drill.details)
                 .font(.body)
                 .padding()
@@ -37,6 +49,7 @@ struct DrillDetailView: View {
             Spacer()
         }
         .navigationTitle(drill.name)
+        .padding()
     }
 }
 
@@ -135,16 +148,42 @@ struct HomeView: View {
 
 // Dummy Teams View
 struct TeamsView: View {
+    let tips = [
+        "Warm-Up is Key: Spend at least 10 minutes warming up to prevent injuries. Include dynamic stretches and light jogging.",
+        "Focus on Technique: Prioritize proper form over speed. For shooting drills, practice placement over power.",
+        "Use Both Feet: Alternate between your dominant and non-dominant foot to improve versatility.",
+        "Set Clear Goals: Define objectives for each drill, such as improving accuracy or speed. Track your progress over time.",
+        "Small Steps for Big Results: Break complex drills into smaller parts to master the fundamentals. Gradually increase difficulty as skills improve.",
+        "Dribble with Control: Keep the ball close to your feet during dribbling drills. Use cones or markers to simulate defenders.",
+        "Short and Intense Sessions: Focused 20–30 minute sessions are better than long, unfocused practices.",
+        "Work on Passing Precision: Practice one-touch and two-touch passing drills with a partner or rebounder. Aim for consistent accuracy over varying distances.",
+        "Master Ball Control: Include juggling and trapping drills to improve touch. Practice receiving passes under pressure.",
+        "Improve Shooting Accuracy: Use targets (cones, corners) for shooting drills. Focus on hitting specific parts of the goal during each attempt.",
+        "Communication is Key: Practice drills that require coordination with teammates. Call out movements or passes during team drills.",
+        "Cool Down and Recover: Spend 5–10 minutes cooling down with static stretches. Hydrate and rest to let your muscles recover.",
+        "Simulate Match Scenarios: Include situational drills like penalty kicks, corner setups, or breakaways.",
+        "Stay Consistent: Regular practice is essential for long-term improvement. Stick to a schedule and revisit challenging drills.",
+        "Make it Fun!: Rotate drills to keep practice engaging and exciting. Challenge yourself with fun variations or friendly competitions."
+    ]
     var body: some View {
-        VStack {
-            Text("Welcome to the Soccer Drill App!")
-                .font(.title)
+        NavigationView {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 16) {
+                    ForEach(tips, id: \.self) { tip in
+                        HStack(alignment: .top) {
+                            Image(systemName: "soccerball") // Soccer icon
+                                .foregroundColor(.blue)
+                                .padding(.top, 5)
+                            Text(tip)
+                                .font(.body)
+                                .padding(.leading, 5)
+                        }
+                    }
+                }
                 .padding()
-            Image("image")
-                .resizable() // Makes the image resizable
-                .scaledToFit() // Scales it to fit within the frame
+            }
+            .navigationTitle("Soccer Drill Tips")
         }
-        .navigationTitle("🏟️ Tips")
     }
 }
 
