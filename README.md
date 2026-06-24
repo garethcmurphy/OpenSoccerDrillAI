@@ -1,59 +1,38 @@
-# ⚽ AR Soccer Drill Setup 📱
+# Open Soccer Drill AI
 
-Revolutionize Your Training with Augmented Reality
+Open Soccer Drill AI is now a React-based drill planning app built for the browser.
 
-Welcome to AR Soccer Drill Setup, the ultimate tool for soccer players and coaches! Using augmented reality (AR), this app helps you precisely position training cones and markers on the field, directly through your iPhone. Say goodbye to guesswork and hello to accuracy and efficiency in setting up your drills!
+## What it includes
 
-## 🎯 Features
-- 🟠 AR Cone Placement: Use your iPhone to visualize and position cones in real-time.
-- 📐 Precision Layouts: Customize drill patterns with exact distances and angles.
-	•	📋 Pre-Set Templates: Choose from pre-designed setups for passing drills, dribbling courses, and more.
-	•	📱 Save and Share: Save your layouts and share them with teammates or other coaches.
+- Drill preset cards with setup notes and coaching points
+- Movable player markers on a soccer pitch
+- Drill detail panel with session flow and skills focus
+- Vite-powered local development workflow
+- GitHub Actions for CI and GitHub Pages deployment
 
-🚀 Getting Started
+## Run locally
 
-Follow these steps to set up the app and start creating AR-enhanced soccer drills.
+```bash
+npm install
+npm run dev
+```
 
-🔧 Prerequisites
-	•	iPhone with ARKit support (iOS 13 or later recommended).
-	•	Sufficient field space for running drills.
+## Validate locally
 
-📥 Installation
-	1.	Download from the App Store:
-Search for “AR Soccer Drill Setup” and install the app.
-	2.	Grant Permissions:
-Upon first launch, allow access to your camera and motion sensors for AR functionality.
+```bash
+npm run lint
+npm run build
+```
 
-🏃‍♂️ How to Use
-	1.	Launch the App:
-Open the app and select “Start New Drill.”
-	2.	Choose Your Layout:
-Pick a pre-set drill or create a custom layout by specifying cone positions.
-	3.	Position Your Cones:
-Use your iPhone camera to visualize AR cones on the field. Move and adjust their placement until perfect.
-	4.	Save Your Layout:
-Save your setup to reuse for future training sessions or share with others.
+## GitHub Pages deployment
 
-🔍 Tips for Best Results
-	•	Use the app in well-lit environments for optimal AR tracking.
-	•	Keep your phone steady while placing cones for better accuracy.
-	•	Measure your physical cone placement against the AR overlay for precise alignment.
+The repository includes:
 
-🛠 Development Notes
+- `.github/workflows/ci.yml` for lint and build checks
+- `.github/workflows/deploy-pages.yml` for GitHub Pages deployment on pushes to `main`
 
-This project is built with:
-	•	🛠 ARKit: Leveraging Apple’s ARKit for accurate AR visualization.
-	•	📱 SwiftUI: A modern and intuitive UI for iPhone users.
-	•	📊 Core Motion: Ensuring smooth tracking and placement on the field.
+After enabling GitHub Pages in the repository settings, set the source to **GitHub Actions**.
 
-📢 Contributors
+## Legacy Swift project
 
-This app was brought to life by a team of soccer enthusiasts and AR developers. See the contributors list for more details.
-
-📜 License
-
-This project is licensed under the MIT License. See the LICENSE.md file for more details.
-
-⚽ “Train smarter, not harder. With AR Soccer Drill Setup, precision meets simplicity on the field.”
-
-Download the app and transform your training sessions today! 🟠📱
+The original Swift/iOS project is still present in the repository for reference, but the active app experience is now the React web app at the repository root.
